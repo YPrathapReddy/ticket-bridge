@@ -16,3 +16,15 @@ uploadForm.addEventListener("submit", function(event){
         
     }
 });
+
+let ticketImage = document.getElementById("ticketImage");
+let previewImage = document.getElementById("previewImage");
+
+ticketImage.addEventListener("change", function(event){
+    
+    
+    let file = event.target.files[0];
+    console.log(file);
+    previewImage.src = URL.createObjectURL(file);
+    previewImage.style.display = "block";
+});

@@ -134,3 +134,7 @@ small {
     color: #666;
     font-size: 12px;
 }
+
+#previewImage {
+    display: none;
+}
