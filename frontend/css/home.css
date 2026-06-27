@@ -1,0 +1,129 @@
+body{
+    margin: 0;
+    font-family: Arial,  sans-serif;
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.logo{
+    color: #1d85a1f3;
+    font-weight: bold;
+}
+.logo h2 {
+    margin: 0;
+}
+.nav-links{
+    display:flex;
+    gap: 30px;
+}
+.nav-links a{
+    text-decoration:  none;
+    color: black;
+    transition: 0.3s;
+}
+.nav-links a:hover{
+    color: #0f7ea0;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+.heading {
+    color: #0f7ea0;
+        margin-top: 30px;
+        margin-bottom: 20px;
+}
+.from-input,
+.to-input,
+.date-input{
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+label{
+    display: block;
+    margin-bottom: 5px;
+}
+input{
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+.search-btn{
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    background-color: #0f7ea0;
+    border: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.search-btn:hover{
+    background-color: #15657b ;
+}
+input:focus {
+    outline: none;
+    border-color: #1d85a1f3;
+}
+
+.search-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+
+.categories-container{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.section-heading {
+    text-align: center;
+    color: #0f7ea0;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.categories-section {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 30px;
+}
+.category-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s;
+    width: 100px;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+.icon {
+    font-size: 30px;
+}
+

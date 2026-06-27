@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="../css/checkout.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <h2>Ticket Bridge</h2>
+        </div>
+
+        <div class="nav-links">
+            <a href="">Home</a>
+            <a href="">Search</a>
+            <a href="">Upload Ticket</a>
+            <a href="">My Tickets</a>
+        </div>
+    </nav>
+
+    <div class="checkout-section">
+
+        <h2 class="page-heading">Checkout</h2>
+
+        <div class="ticket-summary">
+
+            <h3>Ticket Summary</h3>
+
+            <p><strong>Ticket Type:</strong> Bus Ticket</p>
+            <p><strong>Operator:</strong> TGSRTC</p>
+            <p><strong>Route:</strong> Hyderabad → Vijayawada</p>
+            <p><strong>Date:</strong> 25-Jun-2026</p>
+            <p><strong>Seat Type:</strong> Window Seat</p>
+
+        </div>
+
+        <form class="buyer-form">
+
+            <h3>Buyer Details</h3>
+
+            <div class="name-section">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter Full Name" required>
+            </div>
+
+            <div class="phone-section">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter Phone Number" required>
+            </div>
+
+            <div class="email-section">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter Email" required>
+            </div>
+
+        </form>
+
+        <div class="payment-summary">
+
+            <h3>Payment Summary</h3>
+
+            <p><strong>Ticket Price:</strong> ₹650</p>
+            <p><strong>Platform Fee:</strong> ₹20</p>
+            <hr>
+            <p><strong>Total Amount:</strong> ₹670</p>
+        </div>
+
+        <div class="checkout-button">
+            <button class="pay-btn">Proceed To Payment</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

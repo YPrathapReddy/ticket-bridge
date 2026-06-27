@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+.upload-section{
+    background-color: #fff;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 450px;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    color: #1d85a1f3;
+    font-weight: bold;
+}
+
+.logo h2 {
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #0f7ea0;
+}
+.page-heading{
+    text-align: center;
+    color: #0f7ea0;
+    margin-bottom: 10px;
+}
+.page-description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.ticketType-section,
+.ticket-number-section,
+.from-input-section,
+.to-input-section,
+.date-input-section,
+.operator-section,
+.seat-number-section,
+.original-price-section,
+.resale-price-section,
+.description-section,
+.ticket-image-section {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+.submit-btn {
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    background-color: #0f7ea0;
+    border: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #15657b;
+}
+
+a {
+    text-decoration: none;
+    color: #1d85a1f3;
+}
+
+input:focus {
+    outline: none;
+    border-color: #1d85a1f3;
+}
+select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 5px;
+    resize: vertical;
+    min-height: 80px;
+}
+
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #1d85a1f3;
+}
+small {
+    color: #666;
+    font-size: 12px;
+}
