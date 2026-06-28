@@ -1,68 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <title>Ticket Details</title>
-        <link rel="stylesheet" href="../css/ticketDetails.css">
-    </head>
-    <body>
-        <nav class="navbar">
-            <div class="logo">
-                <h2>Ticket Bridge</h2>
-            </div>
-        
-            <div class="nav-links">
-                <a href="">Home</a>
-                <a href="">Search</a>
-                <a href="">Upload Ticket</a>
-                <a href="">My Tickets</a>
-        
-            </div>
-        </nav>
+  <head>
+    <title>Ticket Details</title>
+    <link rel="stylesheet" href="../css/ticketDetails.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <h2>Ticket Bridge</h2>
+      </div>
 
-        <div class="ticket-details-section">
-            
-        
-            <div class="ticket-header">
-                <h2>Bus Ticket</h2>
-            </div>
-        
-            <div class="ticket-info">
-                <p><strong>Operator:</strong> TGSRTC</p>
-                <p><strong>Route:</strong> Hyderabad → Vijayawada</p>
-                <p><strong>Date:</strong> 25-Jun-2026</p>
-                <p><strong>Seat Type:</strong> Window Seat</p>
-            </div>
-        
-            <div class="price-section">
-                <p><strong>Original Price:</strong> ₹900</p>
-                <p><strong>Resale Price:</strong> ₹650</p>
-                <p><strong>You Save:</strong> ₹250</p>
-            </div>
-        
-            <div class="description-section">
-                <h3>Description</h3>
-                <p>
-                    Unable to travel because of personal work.
-                    Ticket is available for immediate transfer.
-                </p>
-            </div>
-        
-            <div class="image-section">
-                <h3>Ticket Image</h3>
-                <!-- <img src="../images/ticket.jpg" alt="Ticket Image"> -->
-            </div>
-        
-            <div class="trust-section">
-                <p>✅ Ticket Verified</p>
-                <p>✅ Seller Verified</p>
-                <p>🛡️ Secure Payment</p>
-            </div>
-        
-            <div class="buy-section">
-                <button class="buy-btn">Buy Ticket</button>
-            </div>
-        
-        </div>
+      <div class="nav-links">
+        <a href="">Home</a>
+        <a href="">Search</a>
+        <a href="">Upload Ticket</a>
+        <a href="">My Tickets</a>
+      </div>
+    </nav>
 
-    </body>
+    <div class="ticket-details-section">
+      <div class="ticket-header">
+        <h2 id="ticketHeading"></h2>
+      </div>
+
+      <div class="ticket-info">
+        
+        <p><strong>Operator:</strong> <span id="operator"></span></p>
+        <p>
+          <strong>Ticket Number:</strong>
+          <span id="ticketNumber"></span>
+        </p>
+        <p>
+          <strong>From:</strong>
+          <span id="fromPlace"></span>
+        </p>
+
+        <p>
+          <strong>To:</strong>
+          <span id="toPlace"></span>
+        </p>
+        <p>
+          <strong>Date:</strong>
+          <span id="travelDate"></span>
+        </p>
+        <p>
+          <strong>Seat Number:</strong>
+          <span id="seatNumber"></span>
+        </p>
+      </div>
+      <div class="price-section">
+        <p><strong>Original Price:</strong> <span id="originalPrice"></span></p>
+        <p><strong>Resale Price:</strong> <span id="resalePrice"></span></p>
+        <p><strong>You Save:</strong> <span id="youSave"></span></p>
+      </div>
+
+      <div class="description-section">
+        <h3>Description</h3>
+        <p id="description"></p>
+      </div>
+
+      <div class="image-section">
+        <h3>Ticket Image</h3>
+        <img id="ticketImage" />
+      </div>
+
+      <div class="trust-section">
+        <p>✅ Ticket Verified</p>
+        <p>✅ Seller Verified</p>
+        <p>🛡️ Secure Payment</p>
+      </div>
+
+      <div class="buy-section">
+        <button class="buy-btn">Buy Ticket</button>
+      </div>
+    </div>
+    <script src="../js/ticketDetails.js"></script>
+  </body>
 </html>
