@@ -1,137 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="../css/searchResults.css"/>
-        <title>Search Results</title>
-    </head>
-    <body>
-        <div class="main-container">
-            <nav class="navbar">
-                <div class="logo">
-                    <h2>Ticket Bridge</h2>
-                </div>
-                
-                <div class="nav-links">
-                    <a href="">Home</a>
-                    <a href="">Search</a>
-                    <a href="">Upload Ticket</a>
-                    <a href="">My Tickets</a>
-                
-                </div>
-
-            </nav>
-            <div class="search-summary-section">
-                <div class="route-info">
-                    <h2><strong>Route:</strong> Hyderabad → Vijayawada</h2>
-                </div>
-                <div class="date-info">
-                    <p><strong>Date:</strong> 25-Jun-2026</p>
-                </div>
-                <div class="result-count">
-                    <p>3 Tickets Found</p>
-                </div>
-            </div>
-            <div class="results-section">
-                <div class="ticket-card">
-                    <div class="ticket-type">
-                        <h3>Bus Ticket</h3>
-                    </div>
-                    
-                    <div class="operator">
-                        <p><strong>Operator:</strong> TGSRTC</p>
-                    </div>
-                    
-                    <div class="route">
-                        <p>Hyderabad → Vijayawada</p>
-                    </div>
-                    
-                    <div class="travel-date">
-                        <p>25-Jun-2026</p>
-                    </div>
-                    
-                    <div class="seat-type">
-                        <p><strong>Seat:</strong> Window Seat</p>
-                    </div>
-                    
-                    <div class="price">
-                        <p><strong>Price:</strong> ₹650</p>
-                    </div>
-                    
-                    <div class="view-details">
-                        <button class="view-details-btn">View Details</button>
-                    </div>
-                    
-
-                </div>
-                <div class="ticket-card">
-                    <div class="ticket-type">
-                        <h3>Bus Ticket</h3>
-                    </div>
-                
-                    <div class="operator">
-                        <p><strong>Operator:</strong> APSRTC</p>
-                    </div>
-                
-                    <div class="route">
-                        <p>Hyderabad → Vijayawada</p>
-                    </div>
-                
-                    <div class="travel-date">
-                        <p>25-Jun-2026</p>
-                    </div>
-                
-                    <div class="seat-type">
-                        <p><strong>Seat:</strong> Window Seat</p>
-                    </div>
-                
-                    <div class="price">
-                        <p><strong>Price:</strong> ₹700</p>
-                    </div>
-                
-                    <div class="view-details">
-                        <button class="view-details-btn">View Details</button>
-                    </div>
-                
-                
-                </div>
-                <div class="ticket-card">
-                    <div class="ticket-type">
-                        <h3>Bus Ticket</h3>
-                    </div>
-                
-                    <div class="operator">
-                        <p><strong>Operator:</strong> Orange Travels</p>
-                    </div>
-                
-                    <div class="route">
-                        <p>Hyderabad → Vijayawada</p>
-                    </div>
-                
-                    <div class="travel-date">
-                        <p>25-Jun-2026</p>
-                    </div>
-                
-                    <div class="seat-type">
-                        <p><strong>Seat:</strong> Window Seat</p>
-                    </div>
-                
-                    <div class="price">
-                        <p><strong>Price:</strong> ₹850</p>
-                    </div>
-                
-                    <div class="view-details">
-                        <button class="view-details-btn">View Details</button>
-                    </div>
-                
-                
-                </div>
-
-            </div>
-            <div class="footer">
-
-            </div>
-
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../css/searchResults.css" />
+    <title>Search Results</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <nav class="navbar">
+        <div class="logo">
+          <h2>Ticket Bridge</h2>
         </div>
-    </body>
+
+        <div class="nav-links">
+          <a href="">Home</a>
+          <a href="">Search</a>
+          <a href="">Upload Ticket</a>
+          <a href="">My Tickets</a>
+        </div>
+      </nav>
+      <div class="search-summary-section">
+        <div class="route-info">
+          <h2>
+            <strong>Route:</strong>
+            <span id="route"></span>
+          </h2>
+        </div>
+        <div class="date-info">
+          <p>
+            <strong>Date:</strong>
+            <span id="travelDate"></span>
+          </p>
+        </div>
+        <div class="result-count">
+          <p id="resultCount"></p>
+        </div>
+      </div>
+      <div class="results-section" id="resultsSection"></div>
+      <div class="footer"></div>
+    </div>
+    <script src="../js/searchResults.js"></script>
+  </body>
 </html>
