@@ -44,6 +44,8 @@ uploadForm.addEventListener("submit", function(event){
     tickets.push(currentTicket);
     localStorage.setItem("tickets", JSON.stringify(tickets));
     console.log(tickets);
+
+    alert("Ticket uploaded successfully!");
     
     
 });

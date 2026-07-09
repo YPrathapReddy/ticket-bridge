@@ -4,7 +4,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Navbar */
+/* ---------------- Navbar ---------------- */
 
 .navbar {
     display: flex;
@@ -39,93 +39,109 @@ body {
     color: #0f7ea0;
 }
 
-/* Checkout Card */
+/* ---------------- Checkout ---------------- */
 
 .checkout-section {
+
     width: 700px;
     margin: 40px auto;
     padding: 30px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
 }
 
 .page-heading {
+
     text-align: center;
     color: #0f7ea0;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+
 }
 
-/* Ticket Summary */
+/* ---------------- Cards ---------------- */
 
-.ticket-summary {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
+.ticket-summary,
+.buyer-form,
+.payment-summary {
+
+    background-color: white;
+    padding: 25px;
     margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
 }
 
-.ticket-summary h3 {
+.ticket-summary h3,
+.buyer-form h3,
+.payment-summary h3 {
+
     margin-top: 0;
+    color: #0f7ea0;
+
 }
 
-/* Buyer Form */
-
-.buyer-form {
-    margin-bottom: 25px;
-}
+/* ---------------- Form ---------------- */
 
 .name-section,
 .phone-section,
 .email-section {
-    margin-bottom: 15px;
+
+    margin-bottom: 18px;
+
 }
 
 label {
+
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
+    font-weight: bold;
+
 }
 
 input {
+
     width: 100%;
-    padding: 8px;
-    border-radius: 4px;
+    padding: 10px;
+    border-radius: 5px;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    font-size: 15px;
+
 }
 
 input:focus {
+
     outline: none;
     border-color: #0f7ea0;
+
 }
 
-/* Payment Summary */
+/* ---------------- Payment ---------------- */
 
-.payment-summary {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 25px;
+.payment-summary hr {
+
+    margin: 18px 0;
+
 }
 
-.payment-summary h3 {
-    margin-top: 0;
-}
-
-/* Button */
+/* ---------------- Button ---------------- */
 
 .pay-btn {
+
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     background-color: #0f7ea0;
     color: white;
-    font-size: 16px;
+    font-size: 17px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: .3s;
+
 }
 
 .pay-btn:hover {
+
     background-color: #15657b;
+
 }

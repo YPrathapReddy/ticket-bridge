@@ -9,6 +9,8 @@
 
 <body>
 
+    <!-- Navbar -->
+
     <nav class="navbar">
         <div class="logo">
             <h2>Ticket Bridge</h2>
@@ -22,58 +24,119 @@
         </div>
     </nav>
 
+    <!-- Checkout -->
+
     <div class="checkout-section">
 
         <h2 class="page-heading">Checkout</h2>
+
+        <!-- Ticket Summary -->
 
         <div class="ticket-summary">
 
             <h3>Ticket Summary</h3>
 
-            <p><strong>Ticket Type:</strong> Bus Ticket</p>
-            <p><strong>Operator:</strong> TGSRTC</p>
-            <p><strong>Route:</strong> Hyderabad → Vijayawada</p>
-            <p><strong>Date:</strong> 25-Jun-2026</p>
-            <p><strong>Seat Type:</strong> Window Seat</p>
+            <p>
+                <strong>Ticket Type:</strong>
+                <span id="ticketType"></span>
+            </p>
+
+            <p>
+                <strong>Operator:</strong>
+                <span id="operator"></span>
+            </p>
+
+            <p>
+                <strong>Route:</strong>
+                <span id="route"></span>
+            </p>
+
+            <p>
+                <strong>Date:</strong>
+                <span id="travelDate"></span>
+            </p>
+
+            <p>
+                <strong>Seat Number:</strong>
+                <span id="seatNumber"></span>
+            </p>
 
         </div>
 
-        <form class="buyer-form">
+        <!-- Buyer Details -->
+
+        <form id="checkoutForm" class="buyer-form">
 
             <h3>Buyer Details</h3>
 
             <div class="name-section">
                 <label for="name">Full Name</label>
-                <input type="text" id="name" placeholder="Enter Full Name" required>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter Full Name"
+                    required>
             </div>
 
             <div class="phone-section">
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" placeholder="Enter Phone Number" required>
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Enter Phone Number"
+                    required>
             </div>
 
             <div class="email-section">
                 <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Enter Email" required>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter Email"
+                    required>
             </div>
 
         </form>
+
+        <!-- Payment Summary -->
 
         <div class="payment-summary">
 
             <h3>Payment Summary</h3>
 
-            <p><strong>Ticket Price:</strong> ₹650</p>
-            <p><strong>Platform Fee:</strong> ₹20</p>
+            <p>
+                <strong>Resale Price:</strong>
+                ₹<span id="resalePrice"></span>
+            </p>
+
+            <p>
+                <strong>Platform Fee:</strong>
+                ₹<span id="platformFee"></span>
+            </p>
+
             <hr>
-            <p><strong>Total Amount:</strong> ₹670</p>
+
+            <p>
+                <strong>Total Amount:</strong>
+                ₹<span id="totalAmount"></span>
+            </p>
+
         </div>
 
-        <div class="checkout-button">
-            <button class="pay-btn">Proceed To Payment</button>
-        </div>
+        <!-- Payment Button -->
+
+        <button
+            type="submit"
+            form="checkoutForm"
+            class="pay-btn">
+
+            Proceed To Payment
+
+        </button>
 
     </div>
+
+    <script src="../js/checkout.js"></script>
 
 </body>
 

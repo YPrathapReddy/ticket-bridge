@@ -57,10 +57,12 @@ resultsSection.addEventListener("click", function (event) {
     let selectedTicket = tickets[originalIndex];
 
     localStorage.setItem("selectedTicket", JSON.stringify(selectedTicket));
+    localStorage.setItem("ticketSource", "search");
 
     console.log(selectedTicket);
     
     window.location.href = "ticketDetails.html";
+    // window.open("ticketDetails.html");
   }
 });
 

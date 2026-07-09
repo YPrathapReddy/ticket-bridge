@@ -41,6 +41,7 @@ searchForm.addEventListener("submit", function (event) {
   localStorage.setItem("filteredTickets", JSON.stringify(filteredTickets));
 
   window.location.href="searchResults.html";
+  // window.open("searchResults.html");
 
 
 });

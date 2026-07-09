@@ -1,61 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>My Tickets</title>
-    <link rel="stylesheet" href="../css/myTickets.css">
-</head>
+    <link rel="stylesheet" href="../css/myTickets.css" />
+  </head>
 
-<body>
-
+  <body>
     <nav class="navbar">
-        <div class="logo">
-            <h2>Ticket Bridge</h2>
-        </div>
+      <div class="logo">
+        <h2>Ticket Bridge</h2>
+      </div>
 
-        <div class="nav-links">
-            <a href="">Home</a>
-            <a href="">Search</a>
-            <a href="">Upload Ticket</a>
-            <a href="">My Tickets</a>
-        </div>
+      <div class="nav-links">
+        <a href="">Home</a>
+        <a href="">Search</a>
+        <a href="">Upload Ticket</a>
+        <a href="">My Tickets</a>
+      </div>
     </nav>
 
     <div class="my-tickets-section">
+      <h1 class="page-heading">My Tickets</h1>
 
-        <h1 class="page-heading">My Tickets</h1>
+      <h2 class="section-heading">Purchased Tickets</h2>
 
-        <h2 class="section-heading">Purchased Tickets</h2>
+      <div id="purchasedTicketsContainer"></div>
 
-        <div class="ticket-card">
+      <h2 class="section-heading">Uploaded Tickets</h2>
 
-            <h3>Bus Ticket</h3>
-
-            <p><strong>Operator:</strong> TGSRTC</p>
-            <p><strong>Route:</strong> Hyderabad → Vijayawada</p>
-            <p><strong>Date:</strong> 25-Jun-2026</p>
-            <p><strong>Seat Number:</strong> U6</p>
-            <p><strong>Status:</strong> Purchased</p>
-
-            <button class="details-btn">
-                View Details
-            </button>
-
-        </div>
-
-        <h2 class="section-heading">Uploaded Tickets</h2>
-
-        <div id="uploadedTicketsContainer">
-
-
-
-        </div>
-
+      <div id="uploadedTicketsContainer"></div>
     </div>
 
     <script src="../js/myTickets.js"></script>
-
-</body>
-
+  </body>
 </html>
