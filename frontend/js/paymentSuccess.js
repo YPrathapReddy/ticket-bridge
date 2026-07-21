@@ -33,8 +33,10 @@ let ticketIndex  = tickets.findIndex(ticket => ticket.ticketNumber===selectedTic
 console.log(ticketIndex);
 let purchasedTickets = JSON.parse(localStorage.getItem("purchasedTickets")) || [];
 if(ticketIndex !== -1){
-    purchasedTickets.push({...selectedTicket,
-      amountPaid : paymentInfo.totalAmount
+    purchasedTickets.push({
+      ...selectedTicket,
+      amountPaid: paymentInfo.totalAmount,
+      purchaseStatus: "Successful",
     });
     tickets.splice(ticketIndex, 1);
   localStorage.setItem("tickets", JSON.stringify(tickets));

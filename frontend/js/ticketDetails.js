@@ -4,7 +4,7 @@ let ticketSource = localStorage.getItem("ticketSource");
 
 console.log(ticketSource);
 
-
+let ticketSourceHeading = document.getElementById("ticketSourceHeading");
 let ticketHeading = document.getElementById("ticketHeading");
 let operator = document.getElementById("operator");
 let ticketNumber = document.getElementById("ticketNumber");
@@ -17,6 +17,8 @@ let resalePrice = document.getElementById("resalePrice");
 let youSave = document.getElementById("youSave");
 let description = document.getElementById("description");
 let ticketImage = document.getElementById("ticketImage");
+
+
 
 ticketHeading.textContent =
     selectedTicket.ticketType.charAt(0).toUpperCase()+
@@ -37,7 +39,23 @@ let buyButton = document.getElementById("buyButton");
 
 let deleteButton = document.getElementById("deleteButton");
 
+let editButton = document.getElementById("editButton");
+
+let priceSection = document.getElementById("priceSection");
+
+// let paymentInfo = JSON.parse(localStorage.getItem("paymentInfo"));
+
+if(ticketSource==="purchased"){
+    ticketSourceHeading.textContent = "Purchased Ticket";
+
+    priceSection.innerHTML = `
+    <p><strong>Amount Paid:</strong> ₹${selectedTicket.amountPaid}</p>
+    <p><strong>Purchase Status:</strong> ${selectedTicket.purchaseStatus}</p>
+`;
+}
+
 if(ticketSource==="search"){
+    ticketSourceHeading.textContent = "Ticket for Sale";
 buyButton.addEventListener("click", function(event){
 
     window.location.href = "checkout.html";
@@ -49,6 +67,7 @@ else{
 }
 
 if (ticketSource === "uploaded") {
+    ticketSourceHeading.textContent = "Uploaded Ticket";
   // TODO: Implement delete ticket functionality
   deleteButton.addEventListener("click", function (event) {
         let tickets = JSON.parse(localStorage.getItem("tickets")) || [];
@@ -63,6 +82,12 @@ if (ticketSource === "uploaded") {
         
         
   });
+
+  editButton.addEventListener("click",function(event){
+    localStorage.setItem("editTicket", JSON.stringify(selectedTicket));
+    window.location.href = "uploadTicket.html";
+  });
 } else {
   deleteButton.classList.add("hidden");
+  editButton.classList.add("hidden");
 }

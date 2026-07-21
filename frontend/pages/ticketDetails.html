@@ -20,6 +20,7 @@
 
     <div class="ticket-details-section">
       <div class="ticket-header">
+        <h3 id="ticketSourceHeading"></h3>
         <h2 id="ticketHeading"></h2>
       </div>
 
@@ -47,7 +48,7 @@
           <span id="seatNumber"></span>
         </p>
       </div>
-      <div class="price-section">
+      <div class="price-section" id="priceSection">
         <p><strong>Original Price:</strong> <span id="originalPrice"></span></p>
         <p><strong>Resale Price:</strong> <span id="resalePrice"></span></p>
         <p><strong>You Save:</strong> <span id="youSave"></span></p>
@@ -73,6 +74,9 @@
         <button id="buyButton" class="buy-btn">Buy Ticket</button>
 
         <button id="deleteButton" class="delete-btn">Delete Ticket</button>
+
+        <button id="editButton" class="edit-btn">Edit Ticket</button>
+
       </div>
     </div>
     <script src="../js/ticketDetails.js"></script>
