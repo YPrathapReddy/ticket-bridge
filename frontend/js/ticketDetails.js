@@ -70,6 +70,10 @@ if (ticketSource === "uploaded") {
     ticketSourceHeading.textContent = "Uploaded Ticket";
   // TODO: Implement delete ticket functionality
   deleteButton.addEventListener("click", function (event) {
+    let isConfirmed =  confirm("Are you sure you want to delete this ticket?");
+    if (!isConfirmed) {
+      return;
+    }
         let tickets = JSON.parse(localStorage.getItem("tickets")) || [];
         let ticketIndex = tickets.findIndex(ticket=>
             ticket.ticketNumber===selectedTicket.ticketNumber
@@ -78,6 +82,7 @@ if (ticketSource === "uploaded") {
             tickets.splice(ticketIndex,1);
             localStorage.setItem("tickets", JSON.stringify(tickets));
         }
+        alert("Ticket deleted successfully!");
         window.location.href="myTickets.html";
         
         
@@ -85,6 +90,7 @@ if (ticketSource === "uploaded") {
 
   editButton.addEventListener("click",function(event){
     localStorage.setItem("editTicket", JSON.stringify(selectedTicket));
+    
     window.location.href = "uploadTicket.html";
   });
 } else {

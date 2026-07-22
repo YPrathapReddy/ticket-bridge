@@ -1,108 +1,146 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="../css/uploadTicket.css"/>
-        <title>Upload Ticket</title>
-    </head>
-    <body>
-     <div class="main-container">
-        <nav class="navbar">
-            <div class="logo">
-                <h2>Ticket Bridge</h2>
-            </div>
-        
-            <div class="nav-links">
-                <a href="">Home</a>
-                <a href="">Search</a>
-                <a href="">Upload Ticket</a>
-                <a href="">My Tickets</a>
-        
-            </div>
-        </nav>
-        <div class = "upload-section">
-            <h2 class="page-heading" id="pageHeading">Upload Ticket</h2>
-            <p class="page-description">Upload your unused ticket and recover your money.</p>
-                <form class="upload-form" id="uploadForm">
-                    <div class="ticketType-section">
-                        <label for="ticketType"> Ticket Type:</label>
-                        <select id="ticketType" name="ticketType" required>
-                            <option value="">Select Ticket Type</option>
-                            <option value="bus">Bus</option>
-                            <option value="train">Train</option>
-                            <option value="movie">Movie</option>
-                            <option value="sports">Sports</option>
-                            <option value="events">Events</option>
-                        </select>
-                    </div>
-                    <div class="ticket-number-section">
-                        <label for="ticketNumber">Ticket Number/PNR</label> 
-                        <input type="text" id="ticketNumber" name="ticketNumber" placeholder="Enter Ticket Number/PNR" required/>
-                    </div>
-
-                    <div class="from-input-section">
-                        <label for="fromPlace">From</label>
-                        <input type="text" id="fromPlace" name="fromPlace" placeholder="From Place" required />
-                    
-                    </div>
-                    <div class="to-input-section">
-                        <label for="toPlace">To</label>
-                        <input type="text" id="toPlace" name="toPlace" placeholder="To Place" required />
-                    </div>
-                    <div class="date-input-section">
-                        <label for="travelDate">Date</label>
-                        <input type="date" id="travelDate" name="travelDate" required />
-                    </div>
-
-                    <div class="operator-section">
-                        <label for="operator">Operator : </label>
-                        <select id="operator" name="operator" required>
-                            <option value="">Select Operator</option>
-                            <option value="redbus">RedBus</option>
-                            <option value="abhibus">AbhiBus</option>
-                            <option value="tgsrtc">TGSRTC</option>
-                            <option value="apsrtc">APSRTC</option>
-                        </select>
-                    </div>
-                    <div class="seat-number-section">
-                        <label for="seatNumber">Seat Number : </label>
-                        <input type="text" id="seatNumber" name="seatNumber" required />
-                    </div>
-                    <div class="original-price-section">
-                        <label for="originalPrice">Original Price : </label>
-                        <input type="number" id="originalPrice" name="originalPrice" placeholder="Enter Original Price" required>
-                    </div>
-                    <div class="resale-price-section">
-                        <label for="resalePrice">Resale Price : </label>
-                        <input type="number" id="resalePrice" name="resalePrice" placeholder="Enter Resale Price" required>
-                        <small>Resale price should not exceed original price.</small>
-                    </div>
-                    <div class="description-section">
-                        <label for="description">Description :</label>
-                        
-                        <textarea id="description" name="description" placeholder="Reason for selling ticket
-Additional details"></textarea>
-                    </div>
-                    <div class="ticket-image-section">
-                        <label for="ticketImage">Ticket Image : </label>
-                        <input type="file" id="ticketImage" name="ticketImage" accept="image/*" required/>
-                    </div>
-                    <div class="image-preview-section">
-                        <img id="previewImage" src="" alt="Ticket Preview">
-                    </div>
-                    <div class="submit-section">
-                        <button class="submit-btn" type="submit" id="submitButton">Submit</button>
-                    </div>
-                    
-
-                </form>
-                
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../css/uploadTicket.css" />
+    <title>Upload Ticket</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <nav class="navbar">
+        <div class="logo">
+          <h2>Ticket Bridge</h2>
         </div>
-        <div class="footer">
 
+        <div class="nav-links">
+          <a href="#" id="homeLink">Home</a>
+          <a href="#" id="searchLink">Search</a>
+          <a href="#" id="uploadLink">Upload Ticket</a>
+          <a href="#" id="myTicketsLink">My Tickets</a>
         </div>
-     </div>
+      </nav>
+      <div class="upload-section">
+        <h2 class="page-heading" id="pageHeading">Upload Ticket</h2>
+        <p class="page-description">
+          Upload your unused ticket and recover your money.
+        </p>
+        <form class="upload-form" id="uploadForm">
+          <div class="ticketType-section">
+            <label for="ticketType"> Ticket Type:</label>
+            <select id="ticketType" name="ticketType" required>
+              <option value="">Select Ticket Type</option>
+              <option value="bus">Bus</option>
+              <option value="train">Train</option>
+              <option value="movie">Movie</option>
+              <option value="sports">Sports</option>
+              <option value="events">Events</option>
+            </select>
+          </div>
+          <div class="ticket-number-section">
+            <label for="ticketNumber">Ticket Number/PNR</label>
+            <input
+              type="text"
+              id="ticketNumber"
+              name="ticketNumber"
+              placeholder="Enter Ticket Number/PNR"
+              required
+            />
+          </div>
 
-     <script src="../js/uploadTicket.js" ></script>
-    </body>
+          <div class="from-input-section">
+            <label for="fromPlace">From</label>
+            <input
+              type="text"
+              id="fromPlace"
+              name="fromPlace"
+              placeholder="From Place"
+              required
+            />
+          </div>
+          <div class="to-input-section">
+            <label for="toPlace">To</label>
+            <input
+              type="text"
+              id="toPlace"
+              name="toPlace"
+              placeholder="To Place"
+              required
+            />
+          </div>
+          <div class="date-input-section">
+            <label for="travelDate">Date</label>
+            <input type="date" id="travelDate" name="travelDate" required />
+          </div>
+
+          <div class="operator-section">
+            <label for="operator">Operator : </label>
+            <select id="operator" name="operator" required>
+              <option value="">Select Operator</option>
+              <option value="redbus">RedBus</option>
+              <option value="abhibus">AbhiBus</option>
+              <option value="tgsrtc">TGSRTC</option>
+              <option value="apsrtc">APSRTC</option>
+            </select>
+          </div>
+          <div class="seat-number-section">
+            <label for="seatNumber">Seat Number : </label>
+            <input type="text" id="seatNumber" name="seatNumber" required />
+          </div>
+          <div class="original-price-section">
+            <label for="originalPrice">Original Price : </label>
+            <input
+              type="number"
+              id="originalPrice"
+              name="originalPrice"
+              placeholder="Enter Original Price"
+              required
+            />
+          </div>
+          <div class="resale-price-section">
+            <label for="resalePrice">Resale Price : </label>
+            <input
+              type="number"
+              id="resalePrice"
+              name="resalePrice"
+              placeholder="Enter Resale Price"
+              required
+            />
+            <small>Resale price should not exceed original price.</small>
+          </div>
+          <div class="description-section">
+            <label for="description">Description :</label>
+
+            <textarea
+              id="description"
+              name="description"
+              placeholder="Reason for selling ticket
+Additional details"
+            ></textarea>
+          </div>
+          <div class="ticket-image-section">
+            <label for="ticketImage">Ticket Image : </label>
+            <input
+              type="file"
+              id="ticketImage"
+              name="ticketImage"
+              accept="image/*"
+              required
+            />
+          </div>
+          <div class="image-preview-section">
+            <img id="previewImage" src="" alt="Ticket Preview" />
+          </div>
+          <div class="submit-section">
+            <button class="submit-btn" type="submit" id="submitButton">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="footer"></div>
+    </div>
+
+    <script src="../js/uploadTicket.js"></script>
+    <script src="../js/navbar.js"></script>
+  </body>
 </html>

@@ -76,6 +76,19 @@ if (resalePriceValue > originalPriceValue) {
 
   let tickets = JSON.parse(localStorage.getItem("tickets")) || [];
 
+  
+  let isDuplicate = tickets.some(
+    (ticket) =>
+      ticket.ticketType === currentTicket.ticketType &&
+      ticket.ticketNumber.trim().toLowerCase() ===
+        currentTicket.ticketNumber.trim().toLowerCase(),
+  );
+
+  if (isDuplicate && !editTicket) {
+    alert("A ticket with this ticket number already exists.");
+    return;
+  }
+  
   // Upload Logic (We'll replace this with Update logic next)
   if(editTicket){
 

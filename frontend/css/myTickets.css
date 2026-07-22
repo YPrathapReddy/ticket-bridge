@@ -84,3 +84,17 @@ body {
 .details-btn:hover {
     background-color: #15657b;
 }
+
+.upload-ticket-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #0f7ea0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.upload-ticket-btn:hover {
+    background: #15657b;
+}
