@@ -1,3 +1,11 @@
+
+let loggedInUser = localStorage.getItem("loggedInUser");
+
+if (!loggedInUser) {
+  window.location.href = "login.html";
+}
+
+
 let buyerInfo = JSON.parse(localStorage.getItem("buyerInfo")) || {};
 
 // console.log(buyerInfo);
@@ -16,6 +24,11 @@ let seatNumber = document.getElementById("seatNumber");
 let ticketNumber = document.getElementById("ticketNumber");
 let amountPaid = document.getElementById("amountPaid");
 
+
+let myTicketsButton = document.getElementById("myTicketsButton");
+let homeButton = document.getElementById("homeButton");
+
+
 buyerName.textContent = buyerInfo.fullName;
 
 summaryTicketType.textContent = `${selectedTicket.ticketType[0].toUpperCase()}${selectedTicket.ticketType.slice(1)} Ticket`;
@@ -30,7 +43,6 @@ let tickets = JSON.parse(localStorage.getItem("tickets")) || [];
 
 let ticketIndex  = tickets.findIndex(ticket => ticket.ticketNumber===selectedTicket.ticketNumber);
 
-console.log(ticketIndex);
 let purchasedTickets = JSON.parse(localStorage.getItem("purchasedTickets")) || [];
 if(ticketIndex !== -1){
     purchasedTickets.push({
@@ -44,4 +56,11 @@ if(ticketIndex !== -1){
   
 }
 
-console.log(tickets);
+
+myTicketsButton.addEventListener("click", function () {
+  window.location.href = "myTickets.html";
+});
+
+homeButton.addEventListener("click", function () {
+  window.location.href = "home.html";
+});

@@ -1,8 +1,15 @@
+let loggedInUser = localStorage.getItem("loggedInUser");
+
+if (!loggedInUser) {
+  window.location.href = "login.html";
+}
+
+
+
 let searchForm = document.getElementById("searchForm");
 
 searchForm.addEventListener("submit", function (event) {
   event.preventDefault();
-  console.log("form sumited");
 
   let fromSearch = document
     .getElementById("fromSearch")
@@ -11,10 +18,6 @@ searchForm.addEventListener("submit", function (event) {
 
   let toSearch = document.getElementById("toSearch").value.trim().toLowerCase();
   let travelDateSearch = document.getElementById("travelDateSearch").value;
-
-  console.log(fromSearch);
-  console.log(toSearch);
-  console.log(travelDateSearch);
 
   let searchInfo = {
     fromPlace: fromSearch,
@@ -32,7 +35,7 @@ searchForm.addEventListener("submit", function (event) {
     if (
       ticket.fromPlace.toLowerCase() === fromSearch.toLowerCase() &&
       ticket.toPlace.toLowerCase() === toSearch.toLowerCase() &&
-      ticket.travelDate === travelDateSearch
+      (travelDateSearch === "" || ticket.travelDate === travelDateSearch)
     ) {
       filteredTickets.push({
         ...ticket,
@@ -41,10 +44,9 @@ searchForm.addEventListener("submit", function (event) {
     }
   }
 
-  console.log(filteredTickets);
 
   localStorage.setItem("filteredTickets", JSON.stringify(filteredTickets));
 
   window.location.href = "searchResults.html";
-  // window.open("searchResults.html");
+
 });

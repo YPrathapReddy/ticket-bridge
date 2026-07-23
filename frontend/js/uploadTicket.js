@@ -1,4 +1,11 @@
 
+let loggedInUser = localStorage.getItem("loggedInUser");
+
+if (!loggedInUser) {
+  window.location.href = "login.html";
+}
+
+
 // =======================
 // Local Storage
 // =======================
@@ -78,13 +85,25 @@ if (resalePriceValue > originalPriceValue) {
 
   
   let isDuplicate = tickets.some(
-    (ticket) =>
-      ticket.ticketType === currentTicket.ticketType &&
-      ticket.ticketNumber.trim().toLowerCase() ===
-        currentTicket.ticketNumber.trim().toLowerCase(),
+    (ticket) =>{
+      if (
+        editTicket &&
+        ticket.ticketType === editTicket.ticketType &&
+        ticket.ticketNumber.trim().toLowerCase() ===
+          editTicket.ticketNumber.trim().toLowerCase()
+      ) {
+        return false;
+      }
+
+      return (
+        ticket.ticketType === currentTicket.ticketType &&
+        ticket.ticketNumber.trim().toLowerCase() ===
+          currentTicket.ticketNumber.trim().toLowerCase()
+      );
+    }
   );
 
-  if (isDuplicate && !editTicket) {
+  if (isDuplicate) {
     alert("A ticket with this ticket number already exists.");
     return;
   }

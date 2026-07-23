@@ -1,3 +1,9 @@
+let loggedInUser = localStorage.getItem("loggedInUser");
+
+if (!loggedInUser) {
+  window.location.href = "login.html";
+}
+
 let filteredTickets = JSON.parse(localStorage.getItem("filteredTickets")) || [];
 
 let searchInfo = JSON.parse(localStorage.getItem("searchInfo"));
@@ -13,22 +19,19 @@ travelDate.textContent = searchInfo.travelDate;
 
 let tickets = JSON.parse(localStorage.getItem("tickets")) || [];
 
-
 if (filteredTickets.length === 0) {
   resultsSection.innerHTML = `
         <h3>No Tickets Found</h3>
     `;
-}
-else {
+} else {
+  resultCount.textContent =
+    filteredTickets.length +
+    (filteredTickets.length === 1 ? " Ticket Found" : " Tickets Found");
 
-    resultCount.textContent = filteredTickets.length +
-        (filteredTickets.length === 1 ? " Ticket Found" : " Tickets Found");
+  for (let i = 0; i < filteredTickets.length; i++) {
+    let ticket = filteredTickets[i];
 
-
-    for (let i = 0; i < filteredTickets.length; i++) {
-      let ticket = filteredTickets[i];
-
-      resultsSection.innerHTML += `
+    resultsSection.innerHTML += `
         <div class ="ticket-card">
 
             <h3>${ticket.ticketType.charAt(0).toUpperCase() + ticket.ticketType.slice(1)} Ticket</h3>
@@ -41,14 +44,8 @@ else {
             </button>
         </div>
     `;
-    console.log(ticket.originalIndex);
-    
-    }
-
+  }
 }
-
-
-
 
 resultsSection.addEventListener("click", function (event) {
   if (event.target.classList.contains("details-btn")) {
@@ -59,10 +56,7 @@ resultsSection.addEventListener("click", function (event) {
     localStorage.setItem("selectedTicket", JSON.stringify(selectedTicket));
     localStorage.setItem("ticketSource", "search");
 
-    console.log(selectedTicket);
-    
     window.location.href = "ticketDetails.html";
     // window.open("ticketDetails.html");
   }
 });
-

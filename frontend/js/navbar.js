@@ -35,3 +35,24 @@ if (myTicketsLink) {
     window.location.href = "myTickets.html";
   });
 }
+
+//log out
+let logoutLink = document.getElementById("logoutLink");
+
+if (logoutLink) {
+  logoutLink.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    let isConfirmed = confirm("Are you sure you want to logout?");
+
+    if (!isConfirmed) {
+      return;
+    }
+
+    localStorage.removeItem("loggedInUser");
+
+    alert("Logged out successfully!");
+
+    window.location.href = "login.html";
+  });
+}

@@ -1,50 +1,62 @@
-<!DOCTYPE html>
-<html >
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href = "../css/login.css">
-        <title>Login</title>
-    </head>
-    <body>
-        <div class="main-container">
-            <div class=  "login-card">
-                <div class = "logo">
-                    <h1>Ticket Bridge</h1>
-                </div>
-
-            
-            <div class = "welcome-section">
-                <h2 class="heading">Welcome to Ticket Bridge</h2>
-                <div class = "sub-text">
-                    <p>Welcome back! Please log in to your account.</p>
-                </div>
-
-            </div>
-            <div class = "login-form">
-                <form >
-                    <div class="email-input">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    </div>
-                    <div class="password-input">
-                        <label for="password">Password:</label>
-                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                    </div>
-                    <div class="login-button">
-                        <button class="login-btn" type="submit">Log In</button>
-                    </div>
-                </form>
-            </div>
-            <div class="forgot-password">
-                <a href="">Forgot Password?</a>
-            </div>
-            <div class = "register-section">
-                <p>Don't have an account? <a href="register.html">Register here</a></p>
-            </div>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="login-card">
+        <div class="logo">
+          <h1>Ticket Bridge</h1>
         </div>
+
+        <div class="welcome-section">
+          <h2 class="heading">Welcome to Ticket Bridge</h2>
+          <div class="sub-text">
+            <p>Welcome back! Please log in to your account.</p>
+          </div>
         </div>
-        <script src="../js/navbar.js"></script>
+        <div class="login-form">
+          <form id="loginForm">
+            <div class="email-input">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
 
-    </body>
+            <div class="password-input">
+              <label for="password">Password:</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
 
+            <div class="login-button">
+              <button class="login-btn" type="submit">Log In</button>
+            </div>
+          </form>
+        </div>
+        <div class="forgot-password">
+          <a href="">Forgot Password?</a>
+        </div>
+        <div class="register-section">
+          <p>
+            Don't have an account? <a href="register.html">Register here</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="../js/login.js"></script>
+  </body>
 </html>
